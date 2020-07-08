@@ -131,3 +131,7 @@ dmypy.json
 # macOs
 .DS_Store
 __MACOSX
+
+# temp files
+*.pickle
+*.npy
