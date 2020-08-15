@@ -8,16 +8,17 @@ Because $\boldsymbol{y}$ is a one-hot vector with $y_o=1$ and otherwise $0$,
 $$
 LHS = - y_o\log(\hat{y_o}) = RHS
 $$
+
 (b)
 $$
-\begin{align*}
+\begin{aligned}
 \frac{\partial \boldsymbol{J}}{\partial \boldsymbol{v_c}} 
 &= \frac{\partial}{\partial \boldsymbol{v_c}}(-\log\frac{e^{\boldsymbol{u^T_ov_c}}}{\sum_{w}e^{\boldsymbol{u^T_w v_c}}}) \\
 &= \frac{\partial}{\partial\boldsymbol{v_c}}(-\boldsymbol{u^T_ov_c}+\log(\sum_{w}e^{\boldsymbol{u^T_w v_c}})) \\
 &= -\boldsymbol{u_o}+\sum_{w}\boldsymbol{u_{w}}\frac{e^{\boldsymbol{u^T_w v_c}}}{\sum_{w}e^{\boldsymbol{u^T_w v_c}}} \\
 &= -\boldsymbol{u_o}+\sum_{w}\boldsymbol{u_{w}}P(O=w|C=c) \\
 &= -\boldsymbol{Uy}+\boldsymbol{U\hat{y}} \\
-\end{align*}
+\end{aligned}
 $$
 
 
